@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+#graph {
+  margin: 0 auto;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+button:first-of-type {
+  margin: 0 2em;
+}

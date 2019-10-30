@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Sort Visualiser</title>
+  </head>
+  <body>
+    <div id="graph"></div>
+    <div class="buttons">
+      <button onclick="randomiseBars()">randomise</button>
+      <label for="num-bars">bars: </label>
+      <input id="num-bars" type="number" value="100" />
+      <button onclick="newGraph()">render</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
