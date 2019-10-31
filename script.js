@@ -1,12 +1,12 @@
 const graph = document.getElementById('graph')
 let numBars = 100
-const initialBars = createOrderedBarsArray(numBars)
-plotGraph(initialBars)
+let bars = createOrderedBarsArray(numBars)
+plotGraph(bars)
 
 function newGraph() {
   numBars = document.getElementById('num-bars').value
-  const newBars = createOrderedBarsArray(numBars)
-  plotGraph(newBars)
+  bars = createOrderedBarsArray(numBars)
+  plotGraph(bars)
 }
 
 function createOrderedBarsArray(numBars) {
@@ -64,7 +64,8 @@ function animateBars(bars) {
 function randomiseBars() {
   const orderedBars = createOrderedBarsArray(numBars)
   const randomisedBars = shuffle(orderedBars)
-  animateBars(randomisedBars)
+  bars = randomisedBars
+  animateBars(bars)
 }
 
 function shuffle(shuffleArray) {
@@ -82,4 +83,20 @@ function shuffle(shuffleArray) {
   }
 
   return shuffleArray
+}
+
+function sortBars() {
+  let randomisedBars = bars
+  let len = randomisedBars.length
+  for (let i = 0; i < len; i++) {
+    for (let j = 0; j < len; j++) {
+      if (bars[j] > bars[j + 1]) {
+        let tmp = bars[j]
+        bars[j] = bars[j + 1]
+        bars[j + 1] = tmp
+      }
+    }
+  }
+  const orderedBars = randomisedBars
+  animateBars(orderedBars)
 }

@@ -12,9 +12,18 @@
     <div id="graph"></div>
     <div class="buttons">
       <button onclick="randomiseBars()">randomise</button>
-      <label for="num-bars">bars: </label>
+      <label for="num-bars">bars:</label>
       <input id="num-bars" type="number" value="100" />
       <button onclick="newGraph()">render</button>
+    </div>
+    <br />
+    <div class="buttons">
+      <label for="algorithm">algorithm:</label>
+      <select id="algorithm" name="algorithm">
+        <option value="bubble">Bubble Sort</option>
+        <option value="bubble2">Just Bubble Sort</option>
+      </select>
+      <button onclick="sortBars()">sort</button>
     </div>
     <script src="script.js"></script>
   </body>
